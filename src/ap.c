@@ -159,16 +159,22 @@ static void updateButtonStatus(void) {
             break;
             
         case SEQ_EXITING:
-            if (!intCurrentlyPressed && systemStatus.doorState == DOOR_CLOSED) {
+            if (systemStatus.doorState == DOOR_CLOSED && !intCurrentlyPressed) {
+                // 문이 닫히고 내부 버튼이 떨어졌을 때만 문 열기
                 motorStart(sysConfig.motorSteps, 1);  // 문 열기
                 systemStatus.doorState = DOOR_OPENING;
                 startAlarm(ALARM_OPENING);
             }
-            else if (extCurrentlyPressed && systemStatus.doorState == DOOR_OPENED) {
+            else if (systemStatus.doorState == DOOR_OPENED && extCurrentlyPressed) {
+                // 문이 열린 상태에서 외부 버튼이 눌리면 닫기
                 motorStart(sysConfig.motorSteps, 0);  // 문 닫기
                 systemStatus.doorState = DOOR_CLOSING;
                 startAlarm(ALARM_CLOSING);
-                systemStatus.seqState = SEQ_WAITING_EXTERNAL;  // 시퀀스 완료
+                systemStatus.seqState = SEQ_WAITING_EXTERNAL;  // 시퀀스를 처음으로 되돌림
+                // 모든 버튼 상태 초기화
+                extBothPressed = 0;
+                intBothPressed = 0;
+                systemStatus.buttonPressTime = 0;
             }
             break;
     }
@@ -190,26 +196,34 @@ static void updateManualButtons(void) {
     static uint32_t lastPressTime = 0;
     
     // 수동 버튼 짧게 누름 처리
-    if (isButtonPressed(&extButtons[2]) || isButtonPressed(&intButtons[2])) {
-        if (currentTime - lastPressTime >= 200) {  // 디바운스
-            if (systemStatus.motorStatus == MOTOR_IDLE) {
-                // 문이 닫혀있으면 열기, 열려있으면 닫기
-                if (systemStatus.doorState == DOOR_CLOSED) {
+    if ((isButtonPressed(&extButtons[2]) || isButtonPressed(&intButtons[2])) && 
+        (currentTime - lastPressTime >= 200))  // 디바운스
+    {
+        if (systemStatus.motorStatus == MOTOR_IDLE) 
+        {
+            switch(systemStatus.doorState)
+            {
+                case DOOR_CLOSED:  // 문이 닫혀있을 때
                     motorStart(sysConfig.motorSteps, 1);  // 열기
                     systemStatus.doorState = DOOR_OPENING;
                     startAlarm(ALARM_OPENING);
-                    // 시퀀스 상태 초기화
-                    systemStatus.seqState = SEQ_WAITING_EXTERNAL;
-                } else if (systemStatus.doorState == DOOR_OPENED) {
+                    break;
+                    
+                case DOOR_OPENED:  // 문이 열려있을 때
                     motorStart(sysConfig.motorSteps, 0);  // 닫기
                     systemStatus.doorState = DOOR_CLOSING;
                     startAlarm(ALARM_CLOSING);
-                    // 시퀀스 상태 초기화
-                    systemStatus.seqState = SEQ_WAITING_EXTERNAL;
-                }
+                    break;
+                    
+                // 문이 움직이는 중에는 아무 동작도 하지 않음
+                case DOOR_OPENING:
+                case DOOR_CLOSING:
+                    break;
             }
-            lastPressTime = currentTime;
+            // 시퀀스 상태 초기화
+            systemStatus.seqState = SEQ_WAITING_EXTERNAL;
         }
+        lastPressTime = currentTime;
     }
 }
 
