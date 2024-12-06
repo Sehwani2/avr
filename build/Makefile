@@ -178,6 +178,30 @@ src/ap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/ap.c.s
 .PHONY : src/ap.c.s
 
+src/driver/RGB.obj: src/driver/RGB.c.obj
+.PHONY : src/driver/RGB.obj
+
+# target to build an object file
+src/driver/RGB.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj
+.PHONY : src/driver/RGB.c.obj
+
+src/driver/RGB.i: src/driver/RGB.c.i
+.PHONY : src/driver/RGB.i
+
+# target to preprocess a source file
+src/driver/RGB.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.i
+.PHONY : src/driver/RGB.c.i
+
+src/driver/RGB.s: src/driver/RGB.c.s
+.PHONY : src/driver/RGB.s
+
+# target to generate assembly for a file
+src/driver/RGB.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.s
+.PHONY : src/driver/RGB.c.s
+
 src/driver/btn.obj: src/driver/btn.c.obj
 .PHONY : src/driver/btn.obj
 
@@ -202,149 +226,101 @@ src/driver/btn.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.s
 .PHONY : src/driver/btn.c.s
 
-src/driver/i2c.obj: src/driver/i2c.c.obj
-.PHONY : src/driver/i2c.obj
+src/driver/buzz.obj: src/driver/buzz.c.obj
+.PHONY : src/driver/buzz.obj
 
 # target to build an object file
-src/driver/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.obj
-.PHONY : src/driver/i2c.c.obj
+src/driver/buzz.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.obj
+.PHONY : src/driver/buzz.c.obj
 
-src/driver/i2c.i: src/driver/i2c.c.i
-.PHONY : src/driver/i2c.i
+src/driver/buzz.i: src/driver/buzz.c.i
+.PHONY : src/driver/buzz.i
 
 # target to preprocess a source file
-src/driver/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.i
-.PHONY : src/driver/i2c.c.i
+src/driver/buzz.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.i
+.PHONY : src/driver/buzz.c.i
 
-src/driver/i2c.s: src/driver/i2c.c.s
-.PHONY : src/driver/i2c.s
+src/driver/buzz.s: src/driver/buzz.c.s
+.PHONY : src/driver/buzz.s
 
 # target to generate assembly for a file
-src/driver/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.s
-.PHONY : src/driver/i2c.c.s
+src/driver/buzz.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.s
+.PHONY : src/driver/buzz.c.s
 
-src/driver/i2c_lcd.obj: src/driver/i2c_lcd.c.obj
-.PHONY : src/driver/i2c_lcd.obj
+src/driver/sensor.obj: src/driver/sensor.c.obj
+.PHONY : src/driver/sensor.obj
 
 # target to build an object file
-src/driver/i2c_lcd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.obj
-.PHONY : src/driver/i2c_lcd.c.obj
+src/driver/sensor.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj
+.PHONY : src/driver/sensor.c.obj
 
-src/driver/i2c_lcd.i: src/driver/i2c_lcd.c.i
-.PHONY : src/driver/i2c_lcd.i
+src/driver/sensor.i: src/driver/sensor.c.i
+.PHONY : src/driver/sensor.i
 
 # target to preprocess a source file
-src/driver/i2c_lcd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.i
-.PHONY : src/driver/i2c_lcd.c.i
+src/driver/sensor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.i
+.PHONY : src/driver/sensor.c.i
 
-src/driver/i2c_lcd.s: src/driver/i2c_lcd.c.s
-.PHONY : src/driver/i2c_lcd.s
+src/driver/sensor.s: src/driver/sensor.c.s
+.PHONY : src/driver/sensor.s
 
 # target to generate assembly for a file
-src/driver/i2c_lcd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.s
-.PHONY : src/driver/i2c_lcd.c.s
+src/driver/sensor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.s
+.PHONY : src/driver/sensor.c.s
 
-src/driver/led.obj: src/driver/led.c.obj
-.PHONY : src/driver/led.obj
+src/driver/stepMotor.obj: src/driver/stepMotor.c.obj
+.PHONY : src/driver/stepMotor.obj
 
 # target to build an object file
-src/driver/led.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/led.c.obj
-.PHONY : src/driver/led.c.obj
+src/driver/stepMotor.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj
+.PHONY : src/driver/stepMotor.c.obj
 
-src/driver/led.i: src/driver/led.c.i
-.PHONY : src/driver/led.i
+src/driver/stepMotor.i: src/driver/stepMotor.c.i
+.PHONY : src/driver/stepMotor.i
 
 # target to preprocess a source file
-src/driver/led.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/led.c.i
-.PHONY : src/driver/led.c.i
+src/driver/stepMotor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.i
+.PHONY : src/driver/stepMotor.c.i
 
-src/driver/led.s: src/driver/led.c.s
-.PHONY : src/driver/led.s
+src/driver/stepMotor.s: src/driver/stepMotor.c.s
+.PHONY : src/driver/stepMotor.s
 
 # target to generate assembly for a file
-src/driver/led.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/led.c.s
-.PHONY : src/driver/led.c.s
+src/driver/stepMotor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.s
+.PHONY : src/driver/stepMotor.c.s
 
-src/driver/pwm16.obj: src/driver/pwm16.c.obj
-.PHONY : src/driver/pwm16.obj
+src/driver/time.obj: src/driver/time.c.obj
+.PHONY : src/driver/time.obj
 
 # target to build an object file
-src/driver/pwm16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm16.c.obj
-.PHONY : src/driver/pwm16.c.obj
+src/driver/time.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj
+.PHONY : src/driver/time.c.obj
 
-src/driver/pwm16.i: src/driver/pwm16.c.i
-.PHONY : src/driver/pwm16.i
-
-# target to preprocess a source file
-src/driver/pwm16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm16.c.i
-.PHONY : src/driver/pwm16.c.i
-
-src/driver/pwm16.s: src/driver/pwm16.c.s
-.PHONY : src/driver/pwm16.s
-
-# target to generate assembly for a file
-src/driver/pwm16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm16.c.s
-.PHONY : src/driver/pwm16.c.s
-
-src/driver/pwm8.obj: src/driver/pwm8.c.obj
-.PHONY : src/driver/pwm8.obj
-
-# target to build an object file
-src/driver/pwm8.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm8.c.obj
-.PHONY : src/driver/pwm8.c.obj
-
-src/driver/pwm8.i: src/driver/pwm8.c.i
-.PHONY : src/driver/pwm8.i
+src/driver/time.i: src/driver/time.c.i
+.PHONY : src/driver/time.i
 
 # target to preprocess a source file
-src/driver/pwm8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm8.c.i
-.PHONY : src/driver/pwm8.c.i
+src/driver/time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/time.c.i
+.PHONY : src/driver/time.c.i
 
-src/driver/pwm8.s: src/driver/pwm8.c.s
-.PHONY : src/driver/pwm8.s
-
-# target to generate assembly for a file
-src/driver/pwm8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm8.c.s
-.PHONY : src/driver/pwm8.c.s
-
-src/driver/uart0.obj: src/driver/uart0.c.obj
-.PHONY : src/driver/uart0.obj
-
-# target to build an object file
-src/driver/uart0.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart0.c.obj
-.PHONY : src/driver/uart0.c.obj
-
-src/driver/uart0.i: src/driver/uart0.c.i
-.PHONY : src/driver/uart0.i
-
-# target to preprocess a source file
-src/driver/uart0.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart0.c.i
-.PHONY : src/driver/uart0.c.i
-
-src/driver/uart0.s: src/driver/uart0.c.s
-.PHONY : src/driver/uart0.s
+src/driver/time.s: src/driver/time.c.s
+.PHONY : src/driver/time.s
 
 # target to generate assembly for a file
-src/driver/uart0.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart0.c.s
-.PHONY : src/driver/uart0.c.s
+src/driver/time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/time.c.s
+.PHONY : src/driver/time.c.s
 
 src/driver/uart1.obj: src/driver/uart1.c.obj
 .PHONY : src/driver/uart1.obj
@@ -370,53 +346,29 @@ src/driver/uart1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.s
 .PHONY : src/driver/uart1.c.s
 
-src/driver/ultrasonic.obj: src/driver/ultrasonic.c.obj
-.PHONY : src/driver/ultrasonic.obj
+src/driver/ultrasonic_int.obj: src/driver/ultrasonic_int.c.obj
+.PHONY : src/driver/ultrasonic_int.obj
 
 # target to build an object file
-src/driver/ultrasonic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic.c.obj
-.PHONY : src/driver/ultrasonic.c.obj
+src/driver/ultrasonic_int.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj
+.PHONY : src/driver/ultrasonic_int.c.obj
 
-src/driver/ultrasonic.i: src/driver/ultrasonic.c.i
-.PHONY : src/driver/ultrasonic.i
-
-# target to preprocess a source file
-src/driver/ultrasonic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic.c.i
-.PHONY : src/driver/ultrasonic.c.i
-
-src/driver/ultrasonic.s: src/driver/ultrasonic.c.s
-.PHONY : src/driver/ultrasonic.s
-
-# target to generate assembly for a file
-src/driver/ultrasonic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic.c.s
-.PHONY : src/driver/ultrasonic.c.s
-
-src/hw/hw.obj: src/hw/hw.c.obj
-.PHONY : src/hw/hw.obj
-
-# target to build an object file
-src/hw/hw.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/hw/hw.c.obj
-.PHONY : src/hw/hw.c.obj
-
-src/hw/hw.i: src/hw/hw.c.i
-.PHONY : src/hw/hw.i
+src/driver/ultrasonic_int.i: src/driver/ultrasonic_int.c.i
+.PHONY : src/driver/ultrasonic_int.i
 
 # target to preprocess a source file
-src/hw/hw.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/hw/hw.c.i
-.PHONY : src/hw/hw.c.i
+src/driver/ultrasonic_int.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.i
+.PHONY : src/driver/ultrasonic_int.c.i
 
-src/hw/hw.s: src/hw/hw.c.s
-.PHONY : src/hw/hw.s
+src/driver/ultrasonic_int.s: src/driver/ultrasonic_int.c.s
+.PHONY : src/driver/ultrasonic_int.s
 
 # target to generate assembly for a file
-src/hw/hw.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/hw/hw.c.s
-.PHONY : src/hw/hw.c.s
+src/driver/ultrasonic_int.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.s
+.PHONY : src/driver/ultrasonic_int.c.s
 
 # Help Target
 help:
@@ -433,36 +385,30 @@ help:
 	@echo "... src/ap.obj"
 	@echo "... src/ap.i"
 	@echo "... src/ap.s"
+	@echo "... src/driver/RGB.obj"
+	@echo "... src/driver/RGB.i"
+	@echo "... src/driver/RGB.s"
 	@echo "... src/driver/btn.obj"
 	@echo "... src/driver/btn.i"
 	@echo "... src/driver/btn.s"
-	@echo "... src/driver/i2c.obj"
-	@echo "... src/driver/i2c.i"
-	@echo "... src/driver/i2c.s"
-	@echo "... src/driver/i2c_lcd.obj"
-	@echo "... src/driver/i2c_lcd.i"
-	@echo "... src/driver/i2c_lcd.s"
-	@echo "... src/driver/led.obj"
-	@echo "... src/driver/led.i"
-	@echo "... src/driver/led.s"
-	@echo "... src/driver/pwm16.obj"
-	@echo "... src/driver/pwm16.i"
-	@echo "... src/driver/pwm16.s"
-	@echo "... src/driver/pwm8.obj"
-	@echo "... src/driver/pwm8.i"
-	@echo "... src/driver/pwm8.s"
-	@echo "... src/driver/uart0.obj"
-	@echo "... src/driver/uart0.i"
-	@echo "... src/driver/uart0.s"
+	@echo "... src/driver/buzz.obj"
+	@echo "... src/driver/buzz.i"
+	@echo "... src/driver/buzz.s"
+	@echo "... src/driver/sensor.obj"
+	@echo "... src/driver/sensor.i"
+	@echo "... src/driver/sensor.s"
+	@echo "... src/driver/stepMotor.obj"
+	@echo "... src/driver/stepMotor.i"
+	@echo "... src/driver/stepMotor.s"
+	@echo "... src/driver/time.obj"
+	@echo "... src/driver/time.i"
+	@echo "... src/driver/time.s"
 	@echo "... src/driver/uart1.obj"
 	@echo "... src/driver/uart1.i"
 	@echo "... src/driver/uart1.s"
-	@echo "... src/driver/ultrasonic.obj"
-	@echo "... src/driver/ultrasonic.i"
-	@echo "... src/driver/ultrasonic.s"
-	@echo "... src/hw/hw.obj"
-	@echo "... src/hw/hw.i"
-	@echo "... src/hw/hw.s"
+	@echo "... src/driver/ultrasonic_int.obj"
+	@echo "... src/driver/ultrasonic_int.i"
+	@echo "... src/driver/ultrasonic_int.s"
 .PHONY : help
 
 

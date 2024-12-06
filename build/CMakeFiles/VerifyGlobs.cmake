@@ -25,16 +25,14 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/sehwanahn/atmega128_workspace/atmega128a/src/*.c")
 set(OLD_GLOB
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/ap.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/RGB.c"
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/btn.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/i2c.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/i2c_lcd.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/led.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/pwm16.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/pwm8.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart0.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/buzz.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/sensor.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.c"
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic.c"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/hw/hw.c"
+  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
