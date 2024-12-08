@@ -3,15 +3,13 @@
 
 #include "def.h"
 
-// 핀 정의
-#define PIR_SENSOR_PIN    PORTC0             // HC-SR501 PIR 센서 핀
-#define LED_PIN           PORTC1             // LED 핀
+#define PIR_PIN     PORTC0
+#define LED_PIN     PORTC1
 
-// 함수 프로토타입
 void sensorInit(void);
-uint8_t isMotionDetected(void);
-void turnOnLED(void);
-void turnOffLED(void);
-void handleMotionDetection(void);  // 새로운 함수 추가
-
+uint8_t isMotion(void);
+void motLedOn(void);
+void motLedOff(void);
+void motHandle(void);
+ 
 #endif

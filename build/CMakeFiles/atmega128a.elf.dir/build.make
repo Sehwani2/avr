@@ -181,24 +181,10 @@ CMakeFiles/atmega128a.elf.dir/src/driver/time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/atmega128a.elf.dir/src/driver/time.c.s"
 	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.c -o CMakeFiles/atmega128a.elf.dir/src/driver/time.c.s
 
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj: CMakeFiles/atmega128a.elf.dir/flags.make
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj: CMakeFiles/atmega128a.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sehwanahn/atmega128_workspace/atmega128a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj"
-	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj -MF CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj.d -o CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj -c /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c
-
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.i"
-	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c > CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.i
-
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.s"
-	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c -o CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.s
-
 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: CMakeFiles/atmega128a.elf.dir/flags.make
 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c
 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: CMakeFiles/atmega128a.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sehwanahn/atmega128_workspace/atmega128a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sehwanahn/atmega128_workspace/atmega128a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj"
 	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj -MF CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj.d -o CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj -c /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c
 
 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.i: cmake_force
@@ -219,7 +205,6 @@ atmega128a_elf_OBJECTS = \
 "CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj" \
 "CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj" \
 "CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj" \
-"CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj" \
 "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj"
 
 # External object files for target atmega128a.elf
@@ -233,11 +218,10 @@ atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.obj
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj
-atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/build.make
 atmega128a.elf: CMakeFiles/atmega128a.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sehwanahn/atmega128_workspace/atmega128a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable atmega128a.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sehwanahn/atmega128_workspace/atmega128a/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable atmega128a.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atmega128a.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Invoking: Make Hex"
 	/home/sehwanahn/atmega128_workspace/avr8/bin/avr-objcopy -O ihex -R .eeprom atmega128a.elf atmega128a.hex

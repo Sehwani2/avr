@@ -3,15 +3,15 @@
 
 #include "def.h"
 
-// 부저 관련 설정
-#define BUZZER_PIN  PB7         // 부저 연결 핀 (PORTB7)
-#define BUZZER_DDR  DDRB        // 부저 데이터 방향 레지스터
-#define BUZZER_PORT PORTB       // 부저 포트
+// 부저 GPIO 설정
+#define BUZZ_PIN  PORTB7
+#define BUZZ_DDR  DDRB
+#define BUZZ_PORT PORTB
 
-// 함수 선언
-void buzzInit(void);
-void buzzRun(uint8_t duty);     // 부저 동작 (듀티비 설정)
-void buzzStop(void);
+// 부저 제어 함수
+void buzzInit(void);    // 부저 초기화
+void buzzRun(uint8_t duty);    // 부저 동작 (PWM duty 설정)
+void buzzStop(void);    // 부저 정지
 
 #endif
                                                                                     

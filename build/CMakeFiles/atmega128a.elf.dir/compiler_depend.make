@@ -11,7 +11,6 @@ CMakeFiles/atmega128a.elf.dir/main.c.obj: /home/sehwanahn/atmega128_workspace/at
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/sensor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.h \
-  /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.h
 
 CMakeFiles/atmega128a.elf.dir/src/ap.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/ap.c \
@@ -23,7 +22,6 @@ CMakeFiles/atmega128a.elf.dir/src/ap.c.obj: /home/sehwanahn/atmega128_workspace/
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/sensor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.h \
-  /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.h
 
 CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/RGB.c \
@@ -53,16 +51,11 @@ CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj: /home/sehwanahn/atmega
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/sensor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.h \
-  /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.h
 
 CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.c \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/common/def.h \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.h
-
-CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c \
-  /home/sehwanahn/atmega128_workspace/atmega128a/src/common/def.h \
-  /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.h
 
 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c \
   /home/sehwanahn/atmega128_workspace/atmega128a/src/common/def.h \
@@ -71,8 +64,6 @@ CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: /home/sehwanahn/a
 
 
 /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c:
-
-/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c:
 
 /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.c:
 
@@ -107,7 +98,5 @@ CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj: /home/sehwanahn/a
 /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.h:
 
 /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.h:
-
-/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.h:
 
 /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.h:

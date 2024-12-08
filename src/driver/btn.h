@@ -3,20 +3,20 @@
 
 #include "def.h"
 
-// 버튼 관련 포트 및 설정값 정의
-#define BUTTON_DDR      DDRD
-#define BUTTON_PIN      PIND
-#define BUTTON_PORT     PORTD
+// 버튼 GPIO 설정
+#define BTN_DDR      DDRD
+#define BTN_PIN      PIND
+#define BTN_PORT     PORTD
 
-#define LONG_PRESS_TIME 3000
-#define DEBOUNCE_TIME   50
+// 버튼 타이밍 설정
+#define DEB_TIME     50      // 디바운스 시간 (ms)
 
-// 버튼 상태 열거형
+// 버튼 상태 정의
 typedef enum {
-    BUTTON_IDLE,
-    BUTTON_PRESSED,
-    BUTTON_RELEASED
-} ButtonState;
+    BTN_IDLE,       // 대기 상태
+    BTN_PRESS,      // 눌림 상태
+    BTN_RELEASE     // 뗌 상태
+} BtnState;
 
 // 버튼 구조체
 typedef struct BTN {
@@ -26,39 +26,33 @@ typedef struct BTN {
     uint8_t btnPin;
 } BTN;
 
-// 전역 변수 선언
-extern volatile uint8_t g_buttonLongPressFlag;
+// 인터럽트 타이밍 변수
+extern volatile uint32_t int0Time;
+extern volatile uint32_t int1Time;
+extern volatile uint32_t int2Time;
+extern volatile uint32_t int3Time;
+extern volatile uint32_t int4Time;
+extern volatile uint32_t int5Time;
 
-extern volatile uint32_t g_interrupt0Time;
-extern volatile uint32_t g_interrupt1Time;
-extern volatile uint32_t g_interrupt2Time;
-extern volatile uint32_t g_interrupt3Time;
-extern volatile uint32_t g_interrupt4Time;
-extern volatile uint32_t g_interrupt5Time;
+// 버튼 상태 변수
+extern volatile uint8_t btn0Press;
+extern volatile uint8_t btn1Press;
+extern volatile uint8_t btn2Press;
+extern volatile uint8_t btn3Press;
+extern volatile uint8_t btn4Press;
+extern volatile uint8_t btn5Press;
 
-extern volatile uint8_t g_button0Pressed;
-extern volatile uint8_t g_button1Pressed;
-extern volatile uint8_t g_button2Pressed;
-extern volatile uint8_t g_button3Pressed;
-extern volatile uint8_t g_button4Pressed;
-extern volatile uint8_t g_button5Pressed;
+// 버튼 제어 함수
+uint8_t isPressed(const BTN* btn);
+void btnInit(BTN* btn, volatile uint8_t* ddr, volatile uint8_t* pin, 
+            volatile uint8_t* port, uint8_t pinNumber);
 
-// 버튼 상태 확인을 위한 매크로
-#define IS_BUTTON_PRESSED(btn) (!(*((btn)->pin) & (1 << (btn)->btnPin)))
-#define SET_BUTTON_PULLUP(btn) (*((btn)->port) |= (1 << (btn)->btnPin))
-
-// 버튼 상태 확인 및 설정을 위한 함수 선언
-uint8_t isButtonPressed(const BTN* btn);
-void setButtonPullup(BTN* btn);
-
-// 함수 선언
-void buttonInit(BTN* button, volatile uint8_t* ddr, volatile uint8_t* pin, 
-               volatile uint8_t* port, uint8_t pinNumber);
+// 외부 인터럽트 초기화 함수
 void INT0_Init(void);
 void INT1_Init(void);
 void INT2_Init(void);
 void INT3_Init(void);
 void INT4_Init(void);
 void INT5_Init(void);
-uint8_t isButtonPressed(const BTN* btn);
+
 #endif

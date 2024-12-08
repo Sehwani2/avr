@@ -3,9 +3,9 @@
 
 #include "def.h"
 
-extern volatile uint32_t systemTime;
+extern volatile uint32_t sysTime;    // 시스템 시간 (ms)
 
-void timeInit(void);
-int millis(void);
+void timeInit(void);    // 타이머 초기화
+uint32_t millis(void);      // 현재 시간 반환
 
 #endif

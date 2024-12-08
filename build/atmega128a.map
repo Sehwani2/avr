@@ -3,19 +3,19 @@ Archive member included to satisfy reference by file (symbol)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
                               /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o (exit)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
-                              /tmp/ccIPT5bt.ltrans0.ltrans.o (__do_copy_data)
+                              /tmp/ccG5Y4VR.ltrans0.ltrans.o (__do_copy_data)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
-                              /tmp/ccIPT5bt.ltrans0.ltrans.o (__do_clear_bss)
+                              /tmp/ccG5Y4VR.ltrans0.ltrans.o (__do_clear_bss)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                              /tmp/ccIPT5bt.ltrans0.ltrans.o (__fixunssfsi)
+                              /tmp/ccG5Y4VR.ltrans0.ltrans.o (__fixunssfsi)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(floatsisf.o)
-                              /tmp/ccIPT5bt.ltrans0.ltrans.o (__floatunsisf)
+                              /tmp/ccG5Y4VR.ltrans0.ltrans.o (__floatunsisf)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_split3.o)
                               /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o) (__fp_splitA)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_zero.o)
                               /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o) (__fp_zero)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o)
-                              /tmp/ccIPT5bt.ltrans0.ltrans.o (__mulsf3)
+                              /tmp/ccG5Y4VR.ltrans0.ltrans.o (__mulsf3)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
                               /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o) (__mulsf3x)
 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_inf.o)
@@ -32,10 +32,9 @@ Archive member included to satisfy reference by file (symbol)
 Allocating common symbols
 Common symbol       size              file
 
-usTcnt              0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-receiveBuffer1      0x100             CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-endCount            0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-startCount          0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+startCnt            0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+endCnt              0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+usCnt               0x2               CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
 
 Discarded input sections
 
@@ -49,7 +48,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
  .text          0x0000000000000000        0x0 CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
  .text          0x0000000000000000        0x0 CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
- .text          0x0000000000000000        0x0 CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
  .text          0x0000000000000000        0x0 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
  .text          0x0000000000000000        0x0 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
@@ -151,7 +149,7 @@ Address of section .data set to 0x800100
 LOAD /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 LOAD /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a
 LOAD CMakeFiles/atmega128a.elf.dir/main.c.obj
-LOAD /tmp/ccIPT5bt.ltrans0.ltrans.o
+LOAD /tmp/ccG5Y4VR.ltrans0.ltrans.o
 LOAD CMakeFiles/atmega128a.elf.dir/src/ap.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj
@@ -159,7 +157,6 @@ LOAD CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj
-LOAD CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj
 LOAD CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj
 START GROUP
 LOAD /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a
@@ -267,7 +264,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x113c
+.text           0x0000000000000000     0x11e4
  *(.vectors)
  .vectors       0x0000000000000000       0x8c /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
                 0x0000000000000000                __vectors
@@ -335,6 +332,7 @@ END GROUP
                 0x00000000000000ca                __bad_interrupt
                 0x00000000000000ca                __vector_31
                 0x00000000000000ca                __vector_23
+                0x00000000000000ca                __vector_30
                 0x00000000000000ca                __vector_25
                 0x00000000000000ca                __vector_11
                 0x00000000000000ca                __vector_13
@@ -347,67 +345,66 @@ END GROUP
                 0x00000000000000ca                __vector_15
                 0x00000000000000ca                __vector_29
                 0x00000000000000ca                __vector_8
-                0x00000000000000ca                __vector_26
                 0x00000000000000ca                __vector_14
                 0x00000000000000ca                __vector_10
+                0x00000000000000ca                __vector_16
                 0x00000000000000ca                __vector_18
                 0x00000000000000ca                __vector_20
- .text          0x00000000000000ce      0x574 /tmp/ccIPT5bt.ltrans0.ltrans.o
-                0x00000000000001a8                __vector_7
-                0x0000000000000216                __vector_30
-                0x0000000000000250                __vector_16
-                0x000000000000029a                __vector_6
-                0x0000000000000336                __vector_5
-                0x00000000000003d2                __vector_4
-                0x000000000000046e                __vector_3
-                0x000000000000050a                __vector_2
-                0x00000000000005a6                __vector_1
-                0x0000000000000642                . = ALIGN (0x2)
+ .text          0x00000000000000ce      0x51c /tmp/ccG5Y4VR.ltrans0.ltrans.o
+                0x00000000000001ba                __vector_7
+                0x0000000000000228                __vector_26
+                0x0000000000000272                __vector_6
+                0x0000000000000306                __vector_5
+                0x000000000000039a                __vector_4
+                0x000000000000042e                __vector_3
+                0x00000000000004c2                __vector_2
+                0x0000000000000556                __vector_1
+                0x00000000000005ea                . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x0000000000000642      0x8a2 /tmp/ccIPT5bt.ltrans0.ltrans.o
-                0x0000000000000642                main
+ .text.startup  0x00000000000005ea      0x9a2 /tmp/ccG5Y4VR.ltrans0.ltrans.o
+                0x00000000000005ea                main
  .text.avr-libc.fplib
-                0x0000000000000ee4       0x5e /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                0x0000000000000ee4                __fixunssfsi
+                0x0000000000000f8c       0x5e /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
+                0x0000000000000f8c                __fixunssfsi
  .text.avr-libc.fplib
-                0x0000000000000f42       0x7a /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(floatsisf.o)
-                0x0000000000000f42                __floatunsisf
-                0x0000000000000f46                __floatsisf
+                0x0000000000000fea       0x7a /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(floatsisf.o)
+                0x0000000000000fea                __floatunsisf
+                0x0000000000000fee                __floatsisf
  .text.avr-libc.fplib
-                0x0000000000000fbc       0x44 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_split3.o)
-                0x0000000000000fbc                __fp_split3
-                0x0000000000000fcc                __fp_splitA
+                0x0000000000001064       0x44 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_split3.o)
+                0x0000000000001064                __fp_split3
+                0x0000000000001074                __fp_splitA
  .text.avr-libc.fplib
-                0x0000000000001000        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_zero.o)
-                0x0000000000001000                __fp_zero
-                0x0000000000001002                __fp_szero
+                0x00000000000010a8        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_zero.o)
+                0x00000000000010a8                __fp_zero
+                0x00000000000010aa                __fp_szero
  .text.avr-libc.fplib
-                0x000000000000100e        0x8 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o)
-                0x000000000000100e                __mulsf3
+                0x00000000000010b6        0x8 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o)
+                0x00000000000010b6                __mulsf3
  .text.avr-libc.fplib
-                0x0000000000001016       0xd2 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
-                0x0000000000001034                __mulsf3x
-                0x000000000000103a                __mulsf3_pse
+                0x00000000000010be       0xd2 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
+                0x00000000000010dc                __mulsf3x
+                0x00000000000010e2                __mulsf3_pse
  .text.avr-libc.fplib
-                0x00000000000010e8        0xc /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_inf.o)
-                0x00000000000010e8                __fp_inf
+                0x0000000000001190        0xc /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_inf.o)
+                0x0000000000001190                __fp_inf
  .text.avr-libc.fplib
-                0x00000000000010f4        0x6 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_nan.o)
-                0x00000000000010f4                __fp_nan
+                0x000000000000119c        0x6 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_nan.o)
+                0x000000000000119c                __fp_nan
  .text.avr-libc.fplib
-                0x00000000000010fa        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
-                0x00000000000010fa                __fp_pscA
+                0x00000000000011a2        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_pscA.o)
+                0x00000000000011a2                __fp_pscA
  .text.avr-libc.fplib
-                0x0000000000001108        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
-                0x0000000000001108                __fp_pscB
+                0x00000000000011b0        0xe /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_pscB.o)
+                0x00000000000011b0                __fp_pscB
  .text.avr-libc.fplib
-                0x0000000000001116       0x22 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_round.o)
-                0x0000000000001116                __fp_round
-                0x0000000000001138                . = ALIGN (0x2)
+                0x00000000000011be       0x22 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_round.o)
+                0x00000000000011be                __fp_round
+                0x00000000000011e0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000001138        0x0 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
-                0x0000000000001138                exit
-                0x0000000000001138                _exit
+ .fini9         0x00000000000011e0        0x0 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+                0x00000000000011e0                exit
+                0x00000000000011e0                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -426,14 +423,14 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000001138        0x4 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
+ .fini0         0x00000000000011e0        0x4 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000113c                _etext = .
+                0x00000000000011e4                _etext = .
 
-.data           0x0000000000800100        0x2 load address 0x000000000000113c
+.data           0x0000000000800100        0x2 load address 0x00000000000011e4
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x0000000000800100        0x1 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .data          0x0000000000800100        0x1 /tmp/ccG5Y4VR.ltrans0.ltrans.o
  *(.data*)
  *(.gnu.linkonce.d*)
  *(.rodata)
@@ -444,21 +441,21 @@ END GROUP
                 0x0000000000800102                _edata = .
                 0x0000000000800102                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800102       0x8c
+.bss            0x0000000000800102       0x9b
                 0x0000000000800102                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0000000000800102       0x8c /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .bss           0x0000000000800102       0x9b /tmp/ccG5Y4VR.ltrans0.ltrans.o
  *(.bss*)
  *(COMMON)
-                0x000000000080018e                PROVIDE (__bss_end, .)
-                0x000000000000113c                __data_load_start = LOADADDR (.data)
-                0x000000000000113e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000080019d                PROVIDE (__bss_end, .)
+                0x00000000000011e4                __data_load_start = LOADADDR (.data)
+                0x00000000000011e6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x000000000080018e        0x0
+.noinit         0x000000000080019d        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x000000000080018e                _end = .
+                0x000000000080019d                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -500,7 +497,7 @@ END GROUP
 
 .comment        0x0000000000000000       0x30
  *(.comment)
- .comment       0x0000000000000000       0x30 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .comment       0x0000000000000000       0x30 /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                          0x31 (size before relaxing)
 
 .note.gnu.avr.deviceinfo
@@ -526,39 +523,39 @@ END GROUP
 .debug_aranges  0x0000000000000000       0x28
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x28 /tmp/ccIPT5bt.ltrans0.ltrans.o
+                0x0000000000000000       0x28 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1971
+.debug_info     0x0000000000000000     0x1ad2
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x780 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
- .debug_info    0x0000000000000780     0x11f1 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_info    0x0000000000000780     0x1352 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
-.debug_abbrev   0x0000000000000000      0xa69
+.debug_abbrev   0x0000000000000000      0xad6
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x718 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
- .debug_abbrev  0x0000000000000718      0x351 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_abbrev  0x0000000000000718      0x3be /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
-.debug_line     0x0000000000000000      0xaa8
+.debug_line     0x0000000000000000      0xabe
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
- .debug_line    0x000000000000001a      0xa8e /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_line    0x000000000000001a      0xaa4 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
-.debug_frame    0x0000000000000000      0x304
+.debug_frame    0x0000000000000000      0x2f0
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x304 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_frame   0x0000000000000000      0x2f0 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
-.debug_str      0x0000000000000000      0xa6a
+.debug_str      0x0000000000000000      0x957
  *(.debug_str)
  .debug_str     0x0000000000000000      0x27d /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
- .debug_str     0x000000000000027d      0x7ed /tmp/ccIPT5bt.ltrans0.ltrans.o
-                                        0x7fa (size before relaxing)
+ .debug_str     0x000000000000027d      0x6da /tmp/ccG5Y4VR.ltrans0.ltrans.o
+                                        0x6ed (size before relaxing)
 
-.debug_loc      0x0000000000000000      0xbeb
+.debug_loc      0x0000000000000000      0xbc6
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0xbeb /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_loc     0x0000000000000000      0xbc6 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -578,9 +575,9 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x1c0
+.debug_ranges   0x0000000000000000      0x240
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000      0x1c0 /tmp/ccIPT5bt.ltrans0.ltrans.o
+ .debug_ranges  0x0000000000000000      0x240 /tmp/ccG5Y4VR.ltrans0.ltrans.o
 
 .debug_macro
  *(.debug_macro)
@@ -591,25 +588,11 @@ Cross Reference Table
 
 Symbol                                            File
 INT0_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 INT1_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 INT2_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 INT3_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 INT4_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 INT5_Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-OUTPUT1                                           CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-RGBInit                                           CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-RGBOff                                            CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
-RGBOffAll                                         CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-RGBOn                                             CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 __DATA_REGION_LENGTH__                            /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __DATA_REGION_ORIGIN__                            /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __EEPROM_REGION_LENGTH__                          /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
@@ -623,14 +606,14 @@ __data_end                                        /home/sehwanahn/atmega128_work
 __data_load_start                                 /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
 __data_start                                      /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
 __do_clear_bss                                    /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_clear_bss.o)
-                                                  /tmp/ccIPT5bt.ltrans0.ltrans.o
+                                                  /tmp/ccG5Y4VR.ltrans0.ltrans.o
 __do_copy_data                                    /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_copy_data.o)
-                                                  /tmp/ccIPT5bt.ltrans0.ltrans.o
+                                                  /tmp/ccG5Y4VR.ltrans0.ltrans.o
 __fixunssfsi                                      /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fixunssfsi.o)
-                                                  /tmp/ccIPT5bt.ltrans0.ltrans.o
+                                                  /tmp/ccG5Y4VR.ltrans0.ltrans.o
 __floatsisf                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(floatsisf.o)
 __floatunsisf                                     /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(floatsisf.o)
-                                                  /tmp/ccIPT5bt.ltrans0.ltrans.o
+                                                  /tmp/ccG5Y4VR.ltrans0.ltrans.o
 __fp_inf                                          /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_inf.o)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
 __fp_nan                                          /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(fp_nan.o)
@@ -652,12 +635,12 @@ __fp_zero                                         /home/sehwanahn/atmega128_work
 __heap_end                                        /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __init                                            /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __mulsf3                                          /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o)
-                                                  /tmp/ccIPT5bt.ltrans0.ltrans.o
+                                                  /tmp/ccG5Y4VR.ltrans0.ltrans.o
 __mulsf3_pse                                      /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
 __mulsf3x                                         /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3x.o)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/libm.a(mulsf3.o)
 __stack                                           /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_1                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_1                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_10                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
@@ -666,13 +649,11 @@ __vector_12                                       /home/sehwanahn/atmega128_work
 __vector_13                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_14                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_15                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_16                                       /tmp/ccIPT5bt.ltrans0.ltrans.o
-                                                  CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
-                                                  /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
+__vector_16                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_17                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_18                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_19                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_2                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_2                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_20                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
@@ -681,30 +662,30 @@ __vector_22                                       /home/sehwanahn/atmega128_work
 __vector_23                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_24                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_25                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_26                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
+__vector_26                                       /tmp/ccG5Y4VR.ltrans0.ltrans.o
+                                                  CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
+                                                  /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_27                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_28                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_29                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_3                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_3                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_30                                       /tmp/ccIPT5bt.ltrans0.ltrans.o
-                                                  CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-                                                  /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
+__vector_30                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_31                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_32                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_33                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_34                                       /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_4                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_4                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_5                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_5                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_6                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_6                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-__vector_7                                        /tmp/ccIPT5bt.ltrans0.ltrans.o
+__vector_7                                        /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 __vector_8                                        /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
@@ -716,7 +697,13 @@ apInit                                            CMakeFiles/atmega128a.elf.dir/
                                                   CMakeFiles/atmega128a.elf.dir/main.c.obj (symbol from plugin)
 apMain                                            CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/main.c.obj (symbol from plugin)
-buttonInit                                        CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn0Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn1Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn2Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn3Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn4Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btn5Press                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+btnInit                                           CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 buzzInit                                          CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
@@ -724,35 +711,29 @@ buzzRun                                           CMakeFiles/atmega128a.elf.dir/
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 buzzStop                                          CMakeFiles/atmega128a.elf.dir/src/driver/buzz.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-endCount                                          CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+endCnt                                            CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
 exit                                              /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/avr51/libgcc.a(_exit.o)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
-g_button0Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+initDistLed                                       CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-g_button1Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int0Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int1Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int2Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int3Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int4Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+int5Time                                          CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+isMotion                                          CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
+isPressed                                         CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-g_button2Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+lastStep                                          CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+ledInit                                           CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-g_button3Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
+ledOff                                            CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
+ledOffAll                                         CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-g_button4Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_button5Pressed                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_buttonLongPressFlag                             CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt0Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt1Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt2Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt3Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt4Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-g_interrupt5Time                                  CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-handleMotionDetection                             CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
+ledOn                                             CMakeFiles/atmega128a.elf.dir/src/driver/RGB.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-initDistanceLED                                   CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-isButtonPressed                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-isMotionDetected                                  CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
-lastStepTime                                      CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
-main                                              /tmp/ccIPT5bt.ltrans0.ltrans.o
+main                                              /tmp/ccG5Y4VR.ltrans0.ltrans.o
                                                   CMakeFiles/atmega128a.elf.dir/main.c.obj (symbol from plugin)
                                                   /home/sehwanahn/atmega128_workspace/avr8/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr51/crtatmega128a.o
 millis                                            CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
@@ -761,35 +742,33 @@ millis                                            CMakeFiles/atmega128a.elf.dir/
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/driver/btn.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-motorDirection                                    CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
-motorInit                                         CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motDir                                            CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motHandle                                         CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-motorStart                                        CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motIdx                                            CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motInit                                           CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-motorStep                                         CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
-motorStepIndex                                    CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
-motorStepsRemaining                               CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motLedOff                                         CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
+motLedOn                                          CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
+motStart                                          CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-motorStop                                         CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
-motorUpdate                                       CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motStep                                           CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motSteps                                          CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-receiveBuffer1                                    CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-rxFlag1                                           CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
+motStop                                           CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+motUpdate                                         CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj (symbol from plugin)
+                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
 sensorInit                                        CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-startCount                                        CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-systemTime                                        CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
+sonicDist                                         CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+sonicInit                                         CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
+sonicTrig                                         CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+st                                                CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
+startCnt                                          CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+sysTime                                           CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
 timeInit                                          CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-turnOffLED                                        CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
-turnOnLED                                         CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj (symbol from plugin)
-uart1Init                                         CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-uart1Receive                                      CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-uart1Transmit                                     CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj (symbol from plugin)
-ultrasonicDistance                                CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-ultrasonicInit                                    CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+updateDistLed                                     CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
                                                   CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-ultrasonicTrigger                                 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-updateDistanceLED                                 CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
-                                                  CMakeFiles/atmega128a.elf.dir/src/ap.c.obj (symbol from plugin)
-usTcnt                                            CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)
+usCnt                                             CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj (symbol from plugin)

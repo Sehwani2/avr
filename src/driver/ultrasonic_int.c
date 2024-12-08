@@ -1,101 +1,102 @@
 #include "ultrasonic_int.h"
 #include "time.h"
-volatile uint16_t startCount;
-volatile uint16_t endCount;
-volatile uint16_t usTcnt;
 
+// 전역 변수
+volatile uint16_t startCnt;    // 에코 시작 시간
+volatile uint16_t endCnt;      // 에코 종료 시간
+volatile uint16_t usCnt;       // 에코 펄스 폭
 
+// 에코 인터럽트 처리
 ISR(INT6_vect)
 {
-    if(PINE & (1<< ECHO_PIN))  // echo핀이 rising 이면
+    if(PINE & (1<< ECHO_PIN))    // 상승 에지
     {
-        startCount = TCNT1;         // startCount에 현재의 값 저장
-
-        EICRB &= ~(1 << ISC60);     // falling edge로 변경 
+        startCnt = TCNT1;    // 시작 시간 저장
+        EICRB &= ~(1 << ISC60);    // 하강 에지로 변경
         EICRB |=  (1 << ISC61);     
     }
-    else
+    else    // 하강 에지
     {
-        endCount = TCNT1;    
-        usTcnt  = endCount - startCount;
-
-        EICRB       |=  (1 << ISC61) | (1 << ISC60);    // Rising Edge Interrupt
+        endCnt = TCNT1;    // 종료 시간 저장
+        usCnt = endCnt - startCnt;    // 펄스 폭 계산
+        EICRB |= (1 << ISC61) | (1 << ISC60);    // 상승 에지로 복귀
     }
 }
 
-void ultrasonicInit()
+void sonicInit(void)
 {
-    TRIGGER_DDR |=  (1 << TRIGGER_PIN);  // 트리거 핀을 출력으로 설정
-    ECHO_DDR    &= ~(1 << ECHO_PIN);     // 에코 핀을 입력으로 설정
-    ECHO_PORT   |=  (1 << ECHO_PIN);     // 에코 핀 풀업 저항 활성화
+    // GPIO 설정
+    TRIG_DDR |= (1 << TRIG_PIN);     // 트리거 출력
+    ECHO_DDR &= ~(1 << ECHO_PIN);    // 에코 입력
+    ECHO_PORT |= (1 << ECHO_PIN);    // 에코 풀업
 
-    // INT6 인터럽트 설정
-    EICRB |= (1 << ISC61) | (1 << ISC60);    // Rising Edge Interrupt
-    EIMSK |= (1 << INT6);                     // INT6 인터럽트 활성화
+    // 인터럽트 설정
+    EICRB |= (1 << ISC61) | (1 << ISC60);    // 상승 에지
+    EIMSK |= (1 << INT6);    // INT6 활성화
 
-    // 타이머1 설정
-    TCCR1B = 0;                               // 타이머1 초기화
-    TCCR1B |= (1 << CS11) | (1 << CS10);     // 64분주 (16MHz/64 = 250kHz)
+    // 타이머 설정
+    TCCR1B = 0;
+    TCCR1B |= (1 << CS11) | (1 << CS10);    // 분주비 64
     
     // 변수 초기화
-    startCount = 0;
-    endCount = 0;
-    usTcnt = 0;
+    startCnt = 0;
+    endCnt = 0;
+    usCnt = 0;
 }
 
-void ultrasonicTrigger()
+void sonicTrig(void)
 {
-    PORTE &= ~(1<<TRIGGER_PIN);  //LOW
+    // 트리거 신호 발생 (10us)
+    PORTE &= ~(1<<TRIG_PIN);
     _delay_us(1);
-    PORTE |= (1<<TRIGGER_PIN);   //High
+    PORTE |= (1<<TRIG_PIN);
     _delay_us(10);
-    PORTE &= ~(1<<TRIGGER_PIN);  //LOW
+    PORTE &= ~(1<<TRIG_PIN);
 }
 
-uint16_t ultrasonicDistance()
+uint16_t sonicDist(void)
 {
-    // 타이머 값이 0이면 유효하지 않은 측정으로 간주
-    if (usTcnt == 0) {
-        return 0xFFFF;  // 유효하지 않은 거리 값 반환
+    if (usCnt == 0) {
+        return 0xFFFF;    // 측정 실패
     }
-    uint16_t distance = (uint16_t)(usTcnt * 0.000004 * 34000) / 2;
-    return distance;
+    // 거리 계산 (cm)
+    uint16_t dist = (uint16_t)(usCnt * 0.000004 * 34000) / 2;
+    return dist;
 }
 
-// LED 제어를 위한 함수 추가
-void initDistanceLED(void) {
-    DDRE |= (1 << PORTE1) | (1 << PORTE2);    // PE1, PE2를 출력으로 설정
-    PORTE &= ~((1 << PORTE1) | (1 << PORTE2)); // LED 초기 상태는 모두 꺼짐
+void initDistLed(void) {
+    // 거리 LED 초기화
+    DDRE |= (1 << PORTE1) | (1 << PORTE2);    // 출력 설정
+    PORTE &= ~((1 << PORTE1) | (1 << PORTE2));    // LED OFF
 }
 
-void updateDistanceLED(void) {
-    static uint32_t lastMeasureTime = 0;
-    static uint32_t ledOnTime = 0;
-    static bool ledState = false;
-    uint32_t currentTime = millis();
+void updateDistLed(void) {
+    static uint32_t lastMeas = 0;    // 마지막 측정 시간
+    static uint32_t ledOn = 0;       // LED ON 시간
+    static uint8_t ledState = 0;     // LED 상태
+    uint32_t now = millis();
     
-    // 100ms마다 거리 측정
-    if (currentTime - lastMeasureTime >= 100) {
-        ultrasonicTrigger();
-        uint16_t distance = ultrasonicDistance();
+    // 100ms 마다 거리 측정
+    if (now - lastMeas >= 100) {
+        sonicTrig();
+        uint16_t dist = sonicDist();
         
-        // 유효한 거리 값일 때만 LED 제어
-        if (distance != 0xFFFF) {
-            if (distance < 30) {
-                PORTE |= (1 << PORTE1) | (1 << PORTE2);   // LED1, LED2 ON
-                ledState = true;
-                ledOnTime = currentTime;   // LED가 켜진 시간 기록
+        if (dist != 0xFFFF) {    // 측정 성공
+            if (dist < 30) {      // 30cm 이내 감지
+                PORTE |= (1 << PORTE1) | (1 << PORTE2);    // LED ON
+                ledState = 1;
+                ledOn = now;
             }
-        } else {
-            PORTE &= ~((1 << PORTE1) | (1 << PORTE2));  // 유효하지 않은 측정일 경우 LED OFF
+        } else {    // 측정 실패
+            PORTE &= ~((1 << PORTE1) | (1 << PORTE2));    // LED OFF
         }
         
-        lastMeasureTime = currentTime;
+        lastMeas = now;
     }
     
-    // LED가 켜진 상태이고 5초가 지났다면 LED를 끔
-    if (ledState && (currentTime - ledOnTime >= 5000)) {
-        PORTE &= ~((1 << PORTE1) | (1 << PORTE2));  // LED OFF
-        ledState = false;
+    // LED 5초 타이머
+    if (ledState && (now - ledOn >= 5000)) {
+        PORTE &= ~((1 << PORTE1) | (1 << PORTE2));    // LED OFF
+        ledState = 0;
     }
 }

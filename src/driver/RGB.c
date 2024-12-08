@@ -1,17 +1,13 @@
 #include "RGB.h"
 
-void RGBInit(void)
+void ledInit(void)
 {
-    // RGB LED 핀을 출력으로 설정
     LED_DDR |= (1 << RED_PIN) | (1 << GREEN_PIN) | (1 << BLUE_PIN);
-    
-    // 초기 상태를 모두 OFF로 설정
-    RGBOffAll();
+    ledOffAll();
 }
 
-void RGBOn(RGB_Color color)
+void ledOn(RGB_Color color)
 {
-    // 선택된 색상의 LED를 켬
     switch (color)
     {
         case RED:
@@ -26,9 +22,8 @@ void RGBOn(RGB_Color color)
     }
 }
 
-void RGBOff(RGB_Color color)
+void ledOff(RGB_Color color)
 {
-    // 선택된 색상의 LED를 끔
     switch (color)
     {
         case RED:
@@ -43,8 +38,7 @@ void RGBOff(RGB_Color color)
     }
 }
 
-void RGBOffAll(void)
+void ledOffAll(void)
 {
-    // 모든 LED를 끔
     LED_PORT &= ~((1 << RED_PIN) | (1 << GREEN_PIN) | (1 << BLUE_PIN));
 }

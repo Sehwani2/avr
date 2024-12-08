@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj.d"
   "CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj"
   "CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj.d"
-  "CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj"
-  "CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj.d"
   "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj"
   "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj.d"
   "atmega128a.elf"

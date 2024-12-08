@@ -16,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/sensor.c" "CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj" "gcc" "CMakeFiles/atmega128a.elf.dir/src/driver/sensor.c.obj.d"
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/stepMotor.c" "CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj" "gcc" "CMakeFiles/atmega128a.elf.dir/src/driver/stepMotor.c.obj.d"
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/time.c" "CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj" "gcc" "CMakeFiles/atmega128a.elf.dir/src/driver/time.c.obj.d"
-  "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c" "CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj" "gcc" "CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj.d"
   "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c" "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj" "gcc" "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj.d"
   )
 

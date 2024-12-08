@@ -49,12 +49,6 @@
 },
 {
   "directory": "/home/sehwanahn/atmega128_workspace/atmega128a/build",
-  "command": "/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc -DF_CPU=16000000L -I/home/sehwanahn/atmega128_workspace/atmega128a/src -I/home/sehwanahn/atmega128_workspace/atmega128a/src/ap -I/home/sehwanahn/atmega128_workspace/atmega128a/src/bsp -I/home/sehwanahn/atmega128_workspace/atmega128a/src/hw -I/home/sehwanahn/atmega128_workspace/atmega128a/src/common -I/home/sehwanahn/atmega128_workspace/atmega128a/src/common/hw/include -I/home/sehwanahn/atmega128_workspace/atmega128a/src/driver -mmcu=atmega128a -g -mmcu=atmega128a -fdata-sections -ffunction-sections -MMD -flto -fno-fat-lto-objects -Wall -Os -g3 -o CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj -c /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c",
-  "file": "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/uart1.c",
-  "output": "CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj"
-},
-{
-  "directory": "/home/sehwanahn/atmega128_workspace/atmega128a/build",
   "command": "/home/sehwanahn/atmega128_workspace/avr8/bin/avr-gcc -DF_CPU=16000000L -I/home/sehwanahn/atmega128_workspace/atmega128a/src -I/home/sehwanahn/atmega128_workspace/atmega128a/src/ap -I/home/sehwanahn/atmega128_workspace/atmega128a/src/bsp -I/home/sehwanahn/atmega128_workspace/atmega128a/src/hw -I/home/sehwanahn/atmega128_workspace/atmega128a/src/common -I/home/sehwanahn/atmega128_workspace/atmega128a/src/common/hw/include -I/home/sehwanahn/atmega128_workspace/atmega128a/src/driver -mmcu=atmega128a -g -mmcu=atmega128a -fdata-sections -ffunction-sections -MMD -flto -fno-fat-lto-objects -Wall -Os -g3 -o CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj -c /home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c",
   "file": "/home/sehwanahn/atmega128_workspace/atmega128a/src/driver/ultrasonic_int.c",
   "output": "CMakeFiles/atmega128a.elf.dir/src/driver/ultrasonic_int.c.obj"

@@ -1,45 +1,41 @@
 #include "sensor.h"
 #include "time.h"
 
-static uint32_t motionStartTime = 0;    // 동작 감지 시작 시간
-static uint8_t motionDetected = 0;      // 동작 감지 상태
+// 동작 감지 상태
+static uint32_t motTime = 0;    // 감지 시간
+static uint8_t motDet = 0;      // 감지 플래그
 
 void sensorInit(void) {
-    // PIR 센서 핀 입력 설정
-    DDRC &= ~(1 << PIR_SENSOR_PIN);    // PORTA5를 입력으로
-    PORTC |= (1 << PIR_SENSOR_PIN);    // 풀업 저항 활성화 (테스트용)
-
-    // LED 핀 출력 설정
-    DDRC |= (1 << LED_PIN);            // PORTA4를 출력으로
-    PORTC &= ~(1 << LED_PIN);          // LED 초기 상태 꺼짐
+    DDRC &= ~(1 << PIR_PIN);    // PIR 센서 입력 설정
+    PORTC |= (1 << PIR_PIN);    // 풀업 저항 활성화
+    DDRC |= (1 << LED_PIN);     // LED 출력 설정
+    PORTC &= ~(1 << LED_PIN);   // LED 초기 OFF
 }
 
-uint8_t isMotionDetected(void) {
-    return (PINC & (1 << PIR_SENSOR_PIN));
+uint8_t isMotion(void) {
+    return (PINC & (1 << PIR_PIN));    // PIR 센서 상태 확인
 }
 
-void turnOnLED(void) {
-    PORTC |= (1 << LED_PIN);
+void motLedOn(void) {
+    PORTC |= (1 << LED_PIN);    // LED ON
 }
 
-void turnOffLED(void) {
-    PORTC &= ~(1 << LED_PIN);
+void motLedOff(void) {
+    PORTC &= ~(1 << LED_PIN);   // LED OFF
 }
 
-void handleMotionDetection(void) {
-    uint32_t currentTime = millis();
+void motHandle(void) {
+    uint32_t now = millis();
     
-    if (isMotionDetected()) {
-        // 동작이 감지되면 타이머 리셋하고 LED 켜기
-        motionStartTime = currentTime;
-        motionDetected = 1;
-        turnOnLED();
+    if (isMotion()) {           // 동작 감지
+        motTime = now;
+        motDet = 1;
+        motLedOn();
     } 
-    else if (motionDetected) {
-        // 동작이 멈추고 5초가 지났는지 확인
-        if (currentTime - motionStartTime >= 5000) {
-            motionDetected = 0;
-            turnOffLED();
+    else if (motDet) {          // 감지 후 타이머
+        if (now - motTime >= 5000) {    // 5초 후 LED OFF
+            motDet = 0;
+            motLedOff();
         }
     }
-}                                
+}

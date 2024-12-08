@@ -1,20 +1,28 @@
 #include "time.h"
 
-volatile uint32_t systemTime = 0;
+volatile uint32_t sysTime = 0;    // 시스템 시간
 
-void timeInit(void) {
-    // Timer0 설정
-    TCCR0 = (1 << CS01) | (1 << CS00);  // 프리스케일러 64
-    TIMSK = (1 << TOIE0);               // 오버플로우 인터럽트 활성화
-    TCNT0 = 0;                          // 타이머 카운터 초기화
+void timeInit(void) 
+{
+    // 타이머3 설정 (16비트)
+    // 16MHz / 64 분주 = 250kHz
+    // CTC 모드로 설정하여 정확히 1ms 마다 인터럽트 발생
+    TCCR3A = 0;                    // 노말 모드
+    TCCR3B = (1 << WGM32) |       // CTC 모드
+             (1 << CS31) |         // 분주비 64
+             (1 << CS30);
+    
+    OCR3A = 250;                   // 1ms를 위한 비교값 (250kHz/1000Hz = 250)
+    ETIMSK |= (1 << OCIE3A);       // 출력비교 A 인터럽트 활성화
 }
 
-ISR(TIMER0_OVF_vect)
+// 타이머3 출력비교 A 인터럽트
+ISR(TIMER3_COMPA_vect) 
 {
-    systemTime++;  // 1ms마다 systemTime 증가
+    sysTime++;    // 정확히 1ms 마다 증가
 }
 
-int millis(void)
+uint32_t millis(void)
 {
-    return systemTime;  // 시스템 경과 시간 반환
+    return sysTime;
 }

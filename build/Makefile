@@ -322,30 +322,6 @@ src/driver/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/time.c.s
 .PHONY : src/driver/time.c.s
 
-src/driver/uart1.obj: src/driver/uart1.c.obj
-.PHONY : src/driver/uart1.obj
-
-# target to build an object file
-src/driver/uart1.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.obj
-.PHONY : src/driver/uart1.c.obj
-
-src/driver/uart1.i: src/driver/uart1.c.i
-.PHONY : src/driver/uart1.i
-
-# target to preprocess a source file
-src/driver/uart1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.i
-.PHONY : src/driver/uart1.c.i
-
-src/driver/uart1.s: src/driver/uart1.c.s
-.PHONY : src/driver/uart1.s
-
-# target to generate assembly for a file
-src/driver/uart1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/uart1.c.s
-.PHONY : src/driver/uart1.c.s
-
 src/driver/ultrasonic_int.obj: src/driver/ultrasonic_int.c.obj
 .PHONY : src/driver/ultrasonic_int.obj
 
@@ -403,9 +379,6 @@ help:
 	@echo "... src/driver/time.obj"
 	@echo "... src/driver/time.i"
 	@echo "... src/driver/time.s"
-	@echo "... src/driver/uart1.obj"
-	@echo "... src/driver/uart1.i"
-	@echo "... src/driver/uart1.s"
 	@echo "... src/driver/ultrasonic_int.obj"
 	@echo "... src/driver/ultrasonic_int.i"
 	@echo "... src/driver/ultrasonic_int.s"
